@@ -7,6 +7,12 @@ function initMap() {
     zoom: 11,
   });
   map.mapTypeId = 'satellite';
+  map.setOptions({
+    draggable: false,
+    zoomControl: false,
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
+  });
   // console.log(Object.getOwnPropertyNames(map));
 }
 
