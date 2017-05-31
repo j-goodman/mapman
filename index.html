@@ -5,6 +5,7 @@
     <meta charset='UTF-8'>
     <meta name="viewport" content="initial-scale=1.0">
     <script src='script.js'></script>
+    <script src='navigator.js'></script>
     <link rel='stylesheet' href='style.css'>
   </head>
   <body>
@@ -12,10 +13,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmxfNNKSOLsknqqPIsJRwrZGBDzCyc3Oc&callback=initMap"
     async defer></script>
     <section class='key-controls'>
-      <div class='up'></div>
-      <div class='left'></div>
-      <div class='right'></div>
-      <div class='down'></div>
+      <div class='up' onclick='panUp()'>▲</div>
+      <div class='left' onclick='panLeft()'>◀</div>
+      <div class='right' onclick='panRight()'>▶</div>
+      <div class='down' onclick='panDown()'>▼</div>
     </section>
   </body>
 </html>
