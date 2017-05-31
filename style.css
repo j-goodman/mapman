@@ -8,7 +8,8 @@ body {
 }
 
 #map {
-  height: 420px;
+  border-radius: 8px;
+  height: 580px;
   width: 920px;
 }
 
