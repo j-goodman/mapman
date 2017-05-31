@@ -1,6 +1,8 @@
 body {
+  align-items: center;
   background: #000;
   display: flex;
+  flex-direction: column;
   height: 100%;
   justify-content: center;
 }
@@ -8,4 +10,25 @@ body {
 #map {
   height: 420px;
   width: 920px;
+}
+
+.key-controls {
+  display: flex;
+}
+
+.key-controls > div {
+  background: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  transition: background .2s, color .2s;
+  width: 50px;
+}
+
+.key-controls > div:hover {
+  background: #fff;
+  color: #000;
 }
