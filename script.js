@@ -2,9 +2,10 @@ var map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 34.397, lng: 250.644},
+    // center: {lat: 34.397, lng: 250.644}, // <-- desert
+    center: {lat: 47.5, lng: -88},
     disableDefaultUI: true,
-    zoom: 11,
+    zoom: 7,
   });
   map.mapTypeId = 'satellite';
   map.setOptions({
@@ -16,7 +17,7 @@ function initMap() {
   // console.log(Object.getOwnPropertyNames(map));
 }
 
-window.onload = function () {
+function clearOverlays() {
   var buttons;
   var i;
   buttons = document.getElementsByClassName('gm-style-cc');
@@ -24,5 +25,13 @@ window.onload = function () {
     buttons[i].style.display = 'none';
   }
   buttons = document.getElementsByTagName('img');
-  buttons[13].style.display = 'none';
+  buttons[buttons.length - 3].style.display = 'none';
+}
+
+window.onload = function () {
+  clearOverlays();
+  setInterval(function () {
+    // map.panBy(200, 200);
+    clearOverlays();
+  }, 1000);
 };
