@@ -1,11 +1,11 @@
 var map;
 
-function initMap() {
+function initMap () {
   map = new google.maps.Map(document.getElementById('map'), {
     // center: {lat: 34.397, lng: 250.644}, // <-- desert
     center: {lat: 47.5, lng: -88},
     disableDefaultUI: true,
-    zoom: 7,
+    zoom: 8,
   });
   map.mapTypeId = 'satellite';
   map.setOptions({
@@ -17,7 +17,7 @@ function initMap() {
   // console.log(Object.getOwnPropertyNames(map));
 }
 
-function clearOverlays() {
+function clearOverlays () {
   var buttons;
   var i;
   buttons = document.getElementsByClassName('gm-style-cc');
@@ -31,7 +31,6 @@ function clearOverlays() {
 window.onload = function () {
   clearOverlays();
   setInterval(function () {
-    // map.panBy(200, 200);
     clearOverlays();
   }, 1000);
 };
